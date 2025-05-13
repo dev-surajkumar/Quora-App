@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/Quora-App/static/css/main.2d7961ca.css",
-    "main.js": "/Quora-App/static/js/main.ae00190a.js",
+    "main.js": "/Quora-App/static/js/main.995c5743.js",
     "static/js/453.b99f5848.chunk.js": "/Quora-App/static/js/453.b99f5848.chunk.js",
     "static/media/p1.jpg": "/Quora-App/static/media/p1.bbf5e2b893fb94077364.jpg",
     "static/media/dpp.avif": "/Quora-App/static/media/dpp.cb7d1e77b89eb5231806.avif",
     "static/media/logo.svg": "/Quora-App/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Quora-App/index.html",
     "main.2d7961ca.css.map": "/Quora-App/static/css/main.2d7961ca.css.map",
-    "main.ae00190a.js.map": "/Quora-App/static/js/main.ae00190a.js.map",
+    "main.995c5743.js.map": "/Quora-App/static/js/main.995c5743.js.map",
     "453.b99f5848.chunk.js.map": "/Quora-App/static/js/453.b99f5848.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d7961ca.css",
-    "static/js/main.ae00190a.js"
+    "static/js/main.995c5743.js"
   ]
 }
