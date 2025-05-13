@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Content from './components/Content';
 import { AuthProvider } from './AuthContext';
@@ -11,7 +11,7 @@ import Answers from './components/Answers';
 function App() {
   return (
     <AuthProvider>
-    <BrowserRouter>
+    <HashRouter>
     <Header/>
     <Routes>
       <Route path='/' element={<Content/>}/>
@@ -19,7 +19,7 @@ function App() {
       <Route path='/account' element={<Account/>}/>
       <Route path='/answers' element={<Answers/>}/>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </AuthProvider>
   );
 }
