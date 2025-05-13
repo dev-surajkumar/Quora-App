@@ -1,70 +1,133 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*******LIVE DEMO -  https://dev-surajkumar.github.io/Quora-App/#/   **********
 
-## Available Scripts
+📚 Quora App – Major Project
+This is a frontend-only implementation of a Quora-like application, built using ReactJS, based on a project assignment. The app simulates user interactions such as asking questions, creating posts, filtering by spaces, and viewing notifications.
 
-In the project directory, you can run:
+📁 File Structure
 
-### `npm start`
+src/
+├── components/
+│   ├── assets/        	 # Dummy images
+│   ├── styles/       		 # All external CSS files
+│   └── [components]   	 # Actual component files
+		├── Details.js  # Dummy data for questions, posts, and spaces
+├── AuthContext/        	 # Authentication context (login state, popups)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**WHAT'S WORKING**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Log In/user/LogOut:- Created with useForm, It successfully authenticates and let's 	you login and renders the first letter of username displayed conditionally. Upon 	clicking the username, Logout appears and when clicked makes the user Logout. I 	have used localstorage and authcontext.
 
-### `npm test`
+2. Spaces:- Clicking the input box opens the box where you can create spaces. The space 	list is rendered on the home page and when a new space is created, it is 	displayed on the top of the left side of home page. I have not created a 	separate page for spaces. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Notifications page(for all notifications), Answer page(for all the questions- no way 	to answer them yet), Add Question/ Add Post box to add the questions/posts, 	Dropdown to create post
 
-### `npm run build`
+4. Responsive CSS design for  all the components.
+         
+⚙️ Technologies & Concepts Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React Hooks:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+	useState – Handling space creation, form data, filters, etc.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	useEffect – Used in cards for questions/posts, and upvote/downvote logic.
 
-### `npm run eject`
+	useContext – Global login state, popups for asking questions/posts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+	useForm – Login, Logout, Signup forms.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React Router DOM:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+	BrowserRouter, Routes, Route, Link – For dynamic routing.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Styling:
 
-## Learn More
+	Pure CSS used (No Tailwind or Bootstrap).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+	Responsive design to handle breaking points.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+State Management & Logic:
 
-### Code Splitting
+	Props for data flow (e.g., filters)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+	Conditional Rendering using ternary operators.
 
-### Analyzing the Bundle Size
+localStorage – Used for storing and retrieving questions/posts (no backend yet).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ES6 syntax and modular code organization.
 
-### Making a Progressive Web App
+Best Practices:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+	Component reusability
 
-### Advanced Configuration
+	Clear naming conventions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+	Code readability and modular design
 
-### Deployment
+🧠 Backend Substitution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Since backend implementation is not in scope, a file named Details.js is created containing hardcoded array objects (questions, posts, spaces). These arrays are imported into components and rendered conditionally.
 
-### `npm run build` fails to minify
+✅ Feature Implementation Based on Assignment
+🔹 Home Page (4 Sections)
+✅ Navigation Bar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✅ Space Creation
+
+✅ Filter Section for Spaces
+
+✅ Question Box (Ask/Answer/Post)
+
+✅ Posts Section
+
+🔹 Navigation Bar
+Feature				Status				Notes
+Logo (Text, Linked to Home)	✅				Implemented using Link
+Home				✅				Content.jsx component
+Following			❌				Not implemented(No Page)
+Answer				✅				Implemented
+Spaces				✅				Implemented (No separate 								Page. only on homepage)
+Notifications			✅				Routed to separate page
+Static Search			✅				Present in navbar
+Profile (Login Auth)		✅				Auth with Login/Signup
+Add Question (Popup)		✅				Popup with Post/Question 								toggle
+
+🔹 Question Box Features
+	✅ Add Question: Title, Add/Cancel buttons using useState and conditional 		    rendering.
+
+	✅ Create Post: Dropdown for visibility, text area, post button.
+
+	✅ Static Toolbar: Ask, Answer, Post (non-functional, but present visually).
+
+🔹 Filter Section (Spaces)
+	✅ Create Space Input: Input field redirects to the space creation box.
+
+	✅ Display at least 5 spaces: Done using dummy data in Details.js rendered 		    through LeftSpace.jsx. And when new Space is created, it displays on top!
+
+🔹 Posts Section
+Each post includes:
+
+✅ Author name
+
+✅ Author bio/qualification
+
+✅ Date of post
+
+✅ Question title
+
+✅ Associated image
+
+✅ Answer text
+
+✅ Icons for upvote, downvote, share, comment
+
+🔹 Bonus: Notifications Page
+✅ Two Sections:
+
+Left Side (Filters): At least 5 filter categories
+
+Right Side (Notifications): Includes dummy data, truncated text with ellipsis (...) for long entries.
+
+📝 Final Notes
+This project demonstrates my understanding of React fundamentals and component-based UI design. It is built entirely with frontend tools and simulates a full Quora-like experience. Backend integration will be added once I learn those skills.
+
