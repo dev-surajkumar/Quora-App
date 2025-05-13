@@ -1,0 +1,241 @@
+.account-container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0,0,0, .2);
+    overflow: hidden;
+    margin: 2rem auto;
+}
+
+.form-box {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    right: 0;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+}
+
+.login {
+    right: 0;
+}
+.register{
+    left: 0;
+}
+.hidden{
+    display: none;
+}
+
+
+form {
+    width: 100%;
+}
+
+.account-container h2 {
+    font-size: 36px;
+    margin: -10px 0;
+    color: var(--mainColor);
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #eee;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.input-box input::placeholder {
+    color: #888;
+    font-weight: 400;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+.forgot-link {
+    margin: -15px 0 15px;
+}
+
+.forgot-link a {
+    font-size: 14.5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn {
+    width: 100%;
+    height: 3rem;
+    background: var(--mainColor);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.account-container p {
+    font-size: 14.5px;
+    margin: 15px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.toggle-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50%;
+    background: var(--mainColor);
+    z-index: 2;
+    border-radius: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: left 2s ease-in-out;
+  }
+  
+  .goLeft {
+    left: 50%;  
+  }
+  
+  .goRight {
+    left: -50%; 
+  }
+  
+
+.toggle-panel {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 2;
+    gap: 1rem;
+}
+.toggle-panel h2{
+    color: #fff;
+}
+.toggle-panel p{
+    font-size: 1.1rem;
+}
+
+.toggle-panel .btn {
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid #fff;
+    box-shadow: none;
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+
+
+  /* Media */
+  @media (max-width: 900px) {
+    .account-container{
+        width: 100%;
+        height: 700px;
+        flex-direction: column;
+    }
+    .form-box{
+        width: 100%;
+        height: 60%;
+        margin: 2rem auto;
+    }
+    .login{
+        bottom: 0;
+    }
+    .register{
+        top: 0;
+    }
+    .toggle-box{
+        flex-direction: column;
+        top: -60%;
+        left: 0;
+        transition: top 2s ease-in-out;
+    }
+    .toggle-panel{
+        width: 100%;
+        height: 30%;
+        margin: 1rem auto;
+    }
+    .goLeft {
+        top: 70%;  
+    }
+    
+    .goRight {
+        top: -70%; 
+    }
+ }
+
+
+ @media (max-width: 350px){
+    .toggle-box{
+        border-radius: 100px;
+    }
+    .toggle-panel{
+        gap: .5rem;
+    }
+    .toggle-panel h2{
+        color: #fff;
+    }
+    .toggle-panel p{
+        font-size: 1.1rem;
+    }
+
+    .toggle-panel .btn {
+        width: 160px;
+        height: 46px;
+        background: transparent;
+        border: 2px solid #fff;
+        box-shadow: none;
+    }
+ }

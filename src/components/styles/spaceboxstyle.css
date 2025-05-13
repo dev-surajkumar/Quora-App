@@ -1,0 +1,138 @@
+.space-popup{
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.775);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 1rem;
+    padding-bottom: 4rem;
+    z-index: 10000;
+    pointer-events: auto; 
+    padding-top: 5rem;
+}
+.space-popup-container{
+    width: 40% ;
+    aspect-ratio: 1;
+    background-color: #fff ;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 4rem; 
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+}
+.space-popup-container i{
+    color: var(--icon);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.space-popup-container div {
+    width: 100%;
+}
+.space-top p{
+    font-size: 1rem;
+    opacity: .6;
+}
+.space-name{
+    width: 100%;
+}
+.space-name h4{
+    display: flex;
+}
+.space-name h4 p{
+    color: var(--mainColor);
+}
+.space-name p{
+    font-size: 14px;
+    opacity: .6;
+    padding: 3px 0;
+}
+.space-name input{
+    width: 100%;
+    height: 3.5rem;
+    padding: .5rem;
+    font-size: 1.8rem;
+    color: black;
+    border: 1px solid var(--border);
+    outline: none;
+}
+.space-name input::placeholder{
+    color: black;
+}
+.special-space{
+    color: rgb(0, 253, 80);
+}
+.space-description{
+    width: 100%;
+}
+.space-description p{
+    font-size: 14px;
+    opacity: .6;
+    padding: 3px 0;
+}
+.space-description input{
+     width: 100%;
+    min-height: 3.5rem;
+    padding: .5rem;
+    font-size: 1rem;
+    color: black;
+    border: 1px solid var(--border);
+    outline: none;
+}
+.space-create{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: .5rem 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.space-create button{
+    padding: .3rem .7rem;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: var(--fontColor);
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* Media*/
+@media (max-width: 1385px) {
+    .space-popup-container {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .space-popup-container {
+        width: 90%;
+        height: 90%;
+    }
+    .post-type{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .user{
+        width: 80%;
+    }
+    .ques-user-info,
+    .post-user-info {
+        width: 60%;
+    }
+    
+}
