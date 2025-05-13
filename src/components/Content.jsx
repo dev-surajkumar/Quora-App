@@ -11,7 +11,7 @@ import SpaceBox from './SpaceBox';
 import { Link } from 'react-router-dom';
 
 const Content = () => {
-    const { showPost, setShowPost, setIsQuestion, isSpace, setIsSpace } = useContext(AuthContext);
+    const { showPost, setShowPost, setIsQuestion, isSpace, setIsSpace, currentUser, setCurrentUser} = useContext(AuthContext);
 
     const [feeds, setFeeds] = useState([]);
     const [spaces, setSpaces]=useState([])
@@ -50,12 +50,22 @@ const Content = () => {
         setSpaces((prev) => [newSpace, ...prev]);
     };
     
+    const showSpaceBoxCreate = () => {
+        if (!currentUser){
+            setCurrentUser({ username: 'Guest' })
+            setIsSpace(true)
+        }else{
+            setIsSpace(true)
+        }
+
+
+    }
 
     return (
         <main>
             <div className="left-container">
                 <input type="text" placeholder="+ Create Space"
-                onClick={() => setIsSpace(true)} />
+                onClick={showSpaceBoxCreate } />
                 <Leftspace spaces={spaces}/>
             </div>
             <div className="main-container">
