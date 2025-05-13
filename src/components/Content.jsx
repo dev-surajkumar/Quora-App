@@ -52,8 +52,7 @@ const Content = () => {
     
     const showSpaceBoxCreate = () => {
         if (!currentUser){
-            setCurrentUser({ username: 'Guest' })
-            setIsSpace(true)
+            alert('Please Log In First')
         }else{
             setIsSpace(true)
         }
